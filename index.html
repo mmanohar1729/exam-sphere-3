@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Sphere</title>
+<style>
+body {
+  font-family: Arial;
+  background: #eef3fa;
+  text-align: center;
+  margin: 0;
+}
+header {
+  background: #123b70;
+  color: white;
+  padding: 25px;
+}
+.container {
+  margin: 40px auto;
+  max-width: 850px;
+}
+.modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 30px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #bbb;
+}
+button {
+  background: #1769aa;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0d477c;
+}
+.student {
+  margin-top: 35px;
+}
+@media(max-width:600px) {
+  .modules { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>EXAM SPHERE</h1>
+  <p>Java Coding Practice and Evaluation System</p>
+</header>
+
+<div class="container">
+
+<h2>Select Your Module</h2>
+
+<div class="modules">
+
+<div class="card">
+<h3>1. Student Module</h3>
+<p>Write and test Java code.</p>
+<button onclick="openModule('student')">
+Enter
+</button>
+</div>
+
+<div class="card">
+<h3>2. Adaptive Module</h3>
+<p>Write and test Java code.</p>
+<button onclick="openModule('adaptive')">
+Enter
+</button>
+</div>
+
+<div class="card">
+<h3>3. Result Module</h3>
+<p>Write and test Java code.</p>
+<button onclick="openModule('result')">
+Enter
+</button>
+</div>
+
+</div>
+
+<div class="student">
+<h2>Student Details</h2>
+<p>Register your student information separately.</p>
+<button onclick="openStudent()">
+Enter Student Details
+</button>
+</div>
+
+</div>
+
+<script>
+function openModule(module) {
+  window.location.href =
+    "page2.html?module=" + module;
+}
+
+function openStudent() {
+  window.location.href =
+    "page2.html?mode=student";
+}
+</script>
+
+</body>
+</html>
